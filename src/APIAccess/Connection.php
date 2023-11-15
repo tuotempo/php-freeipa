@@ -489,8 +489,9 @@ class Connection
      */
     public function endCurl()
     {
-        // @ suppress error. In the beginning the curl_handler is null
-        @curl_close($this->curl_handler);
+        if ($this->curl_handler && is_resource($this->curl_handler)) {
+            curl_close($this->curl_handler);
+        }
     }
 
     /**

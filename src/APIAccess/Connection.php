@@ -215,7 +215,7 @@ class Connection
      * 
      * @since GIT: 0.1.0
      */
-    private function __clone()
+    public function __clone()
     {
         // nothing
     }
@@ -225,7 +225,7 @@ class Connection
      * 
      * @since GIT: 0.1.0
      */
-    private function __wakeup()
+    public function __wakeup()
     {
         // nothing
     }
